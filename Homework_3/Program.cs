@@ -33,14 +33,14 @@ void PrintArray(int[,] array) //печатаем массив
 void ArithmeticMean(int[,] array) // находим и выводим ср арифметическое
 {   
     double sred=0;
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < array.GetLength(1); i++)
     {
         sred=0;
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(0); j++)
         {
-            sred=sred+array[i, j];
+            sred=sred+array[j, i];
         }
-        System.Console.Write($"Ср арифметичесое стоблца {i+1} = {sred/array.GetLength(1)}.  ");
+        System.Console.Write($"Ср арифметичесое стоблца {i+1} = {sred/array.GetLength(0)}.  ");
     }
 }
 Console.Clear();
